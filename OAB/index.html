@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inserção de dados — OAB / POP</title>
+  <link rel="stylesheet" href="cs/style.css" />
+</head>
+<body>
+
+  <div class="page-wrapper">
+
+    <h1 class="page-title">Inserção de dados — OAB / POP</h1>
+    <p class="page-subtitle">
+      Preenche os campos e clica em <strong>Gerar linha</strong> para copiar a linha pronta a colar no Excel.<br>
+      Nos campos com dois níveis podes escolher a opção ou escrever directamente no campo de detalhe.
+    </p>
+
+    <!-- Form sections injected here by script.js -->
+    <div id="form-root"></div>
+
+    <!-- Action buttons -->
+    <div class="actions">
+      <button class="btn btn-primary" onclick="generate()">&#8657; Gerar linha para Excel</button>
+      <button class="btn btn-danger"  onclick="clearAll()">&#10005; Limpar tudo</button>
+    </div>
+
+    <!-- Output area -->
+    <div class="output-wrap" id="out-wrap">
+      <div class="output-label">Linha gerada (separada por tabulação)</div>
+      <div class="output-box" id="out-box"></div>
+      <div class="copy-row">
+        <button class="btn-copy" onclick="copyLine()">&#10063; Copiar linha</button>
+        <span class="badge-ok" id="ok-badge">&#10003; Copiado!</span>
+        <span class="copy-hint">Cola na 1ª célula da próxima linha vazia → <strong>Ctrl+V</strong></span>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
